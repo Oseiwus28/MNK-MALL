@@ -12,8 +12,9 @@ const app = express()
 app.use(express.static(__dirname+"/public"))
 
 // setting view engine
-app.set("view","ejs")
+app.set("view engine","ejs")
 app.use(expressEjsLayout)
+app.set("layout","pages/admin/layouts/master")
 
 // MIDDLEWARES
 // admin route
